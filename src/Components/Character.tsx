@@ -1,10 +1,10 @@
 import React from 'react'
 import { useQuery } from '@tanstack/react-query';
 
-function Character() {
+const Character:React.FC=()=> {
   const  {data}  = useQuery({
     queryKey: ['characterData'],
-    enabled: false, // 🚫 prevent fetch, use cache only
+    enabled: false,
   });
     const character = data as Record<string, any> | undefined;
     let filterObject=["location", "episode", "origin","image"]

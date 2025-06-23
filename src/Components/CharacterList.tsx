@@ -39,7 +39,7 @@ const columns: ColumnDef<CharacterListsTableInfo>[] = [
   },
 ]
 
-function CharacterList() {
+const CharacterList:React.FC=()=> {
   const [page, setPage] = React.useState(1)
   const navigate = useNavigate();
   const queryClient = useQueryClient();
